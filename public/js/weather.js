@@ -17,7 +17,7 @@ function getLongAndLat(result){
     var lat = result[0]["lat"];
     console.log(result);
     jQuery.ajax({
-        url: "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&units=metric&appid=a8455daee9abe33741608e109b46671d",
+        url: "http://api.openweathermap.org/data/2.5/weather?lat="+lat+"&lon="+long+"&units=metric&appid=YourAppId",
         method: 'get',
         success: getCityDetail,
     })
@@ -33,7 +33,7 @@ $(document).ready(function(){
         });
         console.log(city);
         jQuery.ajax({
-            url: "http://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=5&appid=a8455daee9abe33741608e109b46671d",
+            url: "http://api.openweathermap.org/geo/1.0/direct?q="+city+"&limit=5&appid=YourAppId",
             method: 'get',
             success: getLongAndLat
         });
